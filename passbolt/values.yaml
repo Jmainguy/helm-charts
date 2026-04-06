@@ -33,7 +33,7 @@ passbolt:
       # -- Configure pasbolt deployment image pullPolicy
       pullPolicy: IfNotPresent
       # -- Overrides the image tag whose default is the chart appVersion.
-      tag: 5.9.0-1-ce
+      tag: 5.10.0-2-ce
     tls:
       autogenerate: false
     database:
@@ -53,7 +53,6 @@ passbolt:
       APP_FULL_BASE_URL: https://passbolt.soh.re
       DATASOURCES_DEFAULT_HOST: passbolt-postgres-rw
       DATASOURCES_DEFAULT_PORT: "5432"
-      PASSBOLT_KEY_EMAIL: passbolt@soh.re
       PASSBOLT_SSL_FORCE: false
       PASSBOLT_REGISTRATION_PUBLIC: false
       KUBECTL_DOWNLOAD_CMD: "curl -LO https://dl.k8s.io/release/v1.35.0/bin/linux/amd64/kubectl"

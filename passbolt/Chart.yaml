@@ -3,5 +3,5 @@ name: passbolt
 version: 1.0.0
 dependencies:
   - name: passbolt
-    version: v2.0.1
+    version: v2.1.0
     repository: https://download.passbolt.com/charts/passbolt
