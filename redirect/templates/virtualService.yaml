@@ -1,0 +1,23 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: {{ .Values.name | default .Release.Name }}-vs
+  namespace: {{ .Release.Namespace }}
+spec:
+  hosts:
+{{- range .Values.virtualService.hosts }}
+    - {{ . | quote }}
+{{- end }}
+  gateways:
+    - istio-system/{{ .Release.Namespace }}-gateway
+  http:
+    - match:
+        - scheme:
+            exact: http
+      redirect:
+        scheme: https
+        redirectCode: {{ .Values.redirect.redirectCode | default 301 }}
+    - redirect:
+        authority: {{ .Values.redirect.authority | quote }}
+        scheme: {{ .Values.redirect.scheme | default "https" | quote }}
+        redirectCode: {{ .Values.redirect.redirectCode | default 301 }}

@@ -1,0 +1,16 @@
+# Chart release name / logical name (used in resource names)
+name: redirect
+
+cert:
+  issuer: letsencrypt-http
+
+virtualService:
+  hosts: []
+  #  - example.com
+  #  - www.example.com
+
+redirect:
+  # Host to send clients to (Location authority)
+  authority: ""
+  scheme: https
+  redirectCode: 301
