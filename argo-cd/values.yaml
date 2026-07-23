@@ -2,7 +2,7 @@ argo-cd:
   configs:
     rbac:
       policy.csv: |
-        g, Standouthost:argocd-admins, role:admin
+        g, standouthost:argocd-admins, role:admin
         p, role:none, applications, get, */*, deny
         p, role:none, certificates, get, *, deny
         p, role:none, clusters, get, *, deny
