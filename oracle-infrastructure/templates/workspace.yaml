@@ -6,7 +6,7 @@ spec:
   forProvider:
     source: Remote
     module:
-      git::https://github.com/Standouthost/oci-infrastructure//?ref=main
+      git::https://github.com/jmainguy/oci-infrastructure//?ref=main
     vars:
       - key: tenancy_ocid
         value: "ocid1.tenancy.oc1..aaaaaaaa275znqhjh65i7iz5fhio3q4dhywsavzbiubwwwuzzjt3nh4vwe2q"
