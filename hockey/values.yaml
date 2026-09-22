@@ -28,5 +28,5 @@ webapp:
   image:
     repository: zot.soh.re
     name: jmainguy/hockey
-    tag: "v1.14.0"
+    tag: "v1.14.1"
     pullPolicy: IfNotPresent
